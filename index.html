@@ -6,87 +6,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>freeCodeCamp: Survey Form</title>
-  <link rel="stylesheet" type="text/css" src="main.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|PT+Sans+Narrow:400,700" rel="stylesheet">
+
+
 </head>
 
 <!--All id tags are used exclusively to pass FCC project specs, not referenced in stylesheet.-->
+
 <body>
-  <header>
-    
-  </header>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title" id="title">Site Feedback</h1>
+      <p class="header__description"id="description">Welcome to our feedback form for this site. Your input is appreciated. 
+        <br>Required fields are marked with a <abbr title="required">*</abbr>.</p>
+    </header>
 
-  <form id="survey-form">
-    <h1 id="title">Site Feedback</h1>
-    <p id="description">Welcome to our feedback form for this site. Your input is appreciated. Required fields are marked with a <abbr title="required">*</abbr>.</p>
+    <form id="survey-form">
+      <section>
+        <h2>Contact Information</h2>
 
-    <section>
-      <h2>Contact Information</h2>
+        <div>
+          <label for="name" id="name-label">
+            <abbr title="required">*</abbr>
+            <span>Name: </span>
+            <input type="text" name="name" id="name" placeholder="First and last name" required>
+          </label>
+        </div>
 
-      <div>
-        <label for="name" id="name-label">
-          <abbr title="required">*</abbr> 
-          <span>Name: </span>
-          <input type="text" name="name" id="name" placeholder="First and last name" required>
-        </label>
-      </div>
+        <div>
+          <label for="email" id="email-label">
+            <abbr title="required">*</abbr>
+            <span>Email: </span>
+            <input type="email" name="email" id="email" placeholder="Contact email address" required>
+          </label>
+        </div>
+      </section>
 
-      <div>
-        <label for="email" id="email-label">
-          <abbr title="required">*</abbr> 
-          <span>Email: </span>
-          <input type="email" name="email" id="email" placeholder="Contact email address" required>
-        </label>
-      </div>
-    </section>
+      <section>
+        <h2>Feedback</h2>
 
-    <section>
-      <h2>Feedback</h2>
+        <div>
+          <label for="rating" id="number-label">
+            <span>Site Rating: </span>
+            <input type="number" name="rating" min="1" max="10" id="number" placeholder="Rating 1-10 with 10 being the highest">
+          </label>
+        </div>
 
-      <div>
-        <label for="rating" id="number-label">
-          <span>Site Rating: </span>
-          <input type="number" name="rating" min="1" max="10" id="number" placeholder="Rating 1-10 with 10 being the highest">
-        </label>
-      </div>
+        <div>
+          <label for="dropdown">
+            <span>Select your age bracket: </span>
+            <select name="dropdown" id="dropdown">
+              <option value="under-18">Under 18</option>
+              <option value="18-25" selected>18-25</option>
+              <option value="26-35">26-35</option>
+              <option value="36-50">36-50</option>
+              <option value="over-50">Over 50</option>
+            </select>
+          </label>
+        </div>
 
-      <div>
-        <label for="dropdown">
-          <span>Select your age bracket: </span>
-          <select name="dropdown" id="dropdown">
-           <option value="under-18">Under 18</option>
-           <option value="18-25" selected>18-25</option>
-           <option value="26-35">26-35</option>
-           <option value="36-50">36-50</option>
-           <option value="over-50">Over 50</option>
-          </select>
-        </label>
-      </div>
+        <fieldset>
+          <legend>Does this site meet your needs?</legend>
+          <ul>
+            <li>
+              <label for="yes">
+                <input type="radio" name="answer" value="yes">
+                <span>Yes</span>
+              </label>
+            </li>
+            <li>
+              <label for="no">
+                <input type="radio" name="answer" value="no">
+                <span>No</span>
+              </label>
+            </li>
+            <li>
+              <label for="unsure">
+                <input type="radio" name="answer" value="unsure">
+                <span>Unsure</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
-      <fieldset>
-        <legend>Does this site meet your needs?</legend>
-        <ul>
-          <li>
-            <label for="yes">
-              <input type="radio" name="answer" value="yes">
-              <span>Yes</span>
-            </label>
-          </li>
-          <li>
-            <label for="no">
-              <input type="radio" name="answer" value="no">
-              <span>No</span>
-            </label>
-          </li>
-          <li>
-            <label for="unsure">
-              <input type="radio" name="answer" value="unsure">
-              <span>Unsure</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-
-      <fieldset>
+        <fieldset>
           <legend>What features are most important to you? (Select all that apply)</legend>
           <ul>
             <li>
@@ -122,19 +126,24 @@
           </ul>
         </fieldset>
 
+        <div>
+          <label for="comment">
+            <span>Comments: </span>
+            <textarea name="comment" rows="10" cols="60" placeholder="Provide any additional comments here"></textarea>
+          </label>
+        </div>
+      </section>
+
       <div>
-        <label for="comment">
-          <span>Comments: </span>
-          <textarea name="comment" rows="10" cols="60" placeholder="Provide any additional comments here"></textarea>
-        </label>
+        <input type="submit" id="submit" value="Submit">
       </div>
-    </section>
-    
-    <div>
-      <input type="submit" id="submit" value="Submit">
-    </div>
-    
-  </form>
+
+    </form>
+
+    <footer>
+
+    </footer>
+  </div>
 </body>
 
 </html>
