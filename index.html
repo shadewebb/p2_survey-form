@@ -19,126 +19,127 @@
     <header class="header">
       <h1 class="header__title" id="title">Site Feedback</h1>
       <p class="header__description"id="description">Welcome to our feedback form for this site. Your input is appreciated. 
-        <br>Required fields are marked with a <abbr title="required">*</abbr>.</p>
+        <br>Required fields are marked with <abbr title="required">*</abbr>.</p>
     </header>
+    <main class="main">
+      <form class="survey-form" id="survey-form">
+        <section>
+          <h2 class="survey-form__header">Contact Information</h2>
 
-    <form id="survey-form">
-      <section>
-        <h2>Contact Information</h2>
+          <div class="survey-form__question">
+            <label for="name" id="name-label">
+              <abbr title="required">*</abbr>
+              <span>Name: </span>
+              <input type="text" name="name" id="name" placeholder="First and last name" required>
+            </label>
+          </div>
+
+          <div class="survey-form__question">
+            <label for="email" id="email-label">
+              <abbr title="required">*</abbr>
+              <span>Email: </span>
+              <input type="email" name="email" id="email" placeholder="Contact email address" required>
+            </label>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="survey-form__header">Feedback</h2>
+
+          <div class="survey-form__question">
+            <label for="rating" id="number-label">
+              <span>Site Rating: </span>
+              <input type="number" name="rating" min="1" max="10" id="number" placeholder="Rating 1-10 with 10 being the highest">
+            </label>
+          </div>
+
+          <div class="survey-form__question">
+            <label for="dropdown">
+              <span>Select your age bracket: </span>
+              <select name="dropdown" id="dropdown">
+                <option value="under-18">Under 18</option>
+                <option value="18-25" selected>18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-50">36-50</option>
+                <option value="over-50">Over 50</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Does this site meet your needs?</legend>
+            <ul>
+              <li>
+                <label for="yes">
+                  <input type="radio" name="answer" value="yes">
+                  <span>Yes</span>
+                </label>
+              </li>
+              <li>
+                <label for="no">
+                  <input type="radio" name="answer" value="no">
+                  <span>No</span>
+                </label>
+              </li>
+              <li>
+                <label for="unsure">
+                  <input type="radio" name="answer" value="unsure">
+                  <span>Unsure</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>What features are most important to you? (Select all that apply)</legend>
+            <ul>
+              <li>
+                <label for="speed">
+                  <input type="checkbox" name="features" value="speed">
+                  <span>Fast Load Times</span>
+                </label>
+              </li>
+              <li>
+                <label for="navigation">
+                  <input type="checkbox" name="features" value="navigation">
+                  <span>Intuitive Navigation</span>
+                </label>
+              </li>
+              <li>
+                <label for="personal">
+                  <input type="checkbox" name="features" value="personal">
+                  <span>Personal Recommendations</span>
+                </label>
+              </li>
+              <li>
+                <label for="payment">
+                  <input type="checkbox" name="features" value="payment">
+                  <span>Multiple Payment Methods</span>
+                </label>
+              </li>
+              <li>
+                <label for="privacy">
+                  <input type="checkbox" name="features" value="privacy">
+                  <span>Private Information Not Tracked</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <div class="survey-form__question">
+            <label for="comment">
+              <span>Comments: </span>
+              <textarea name="comment" rows="10" cols="60" placeholder="Provide any additional comments here"></textarea>
+            </label>
+          </div>
+        </section>
 
         <div>
-          <label for="name" id="name-label">
-            <abbr title="required">*</abbr>
-            <span>Name: </span>
-            <input type="text" name="name" id="name" placeholder="First and last name" required>
-          </label>
+          <input type="submit" id="submit" value="Submit">
         </div>
 
-        <div>
-          <label for="email" id="email-label">
-            <abbr title="required">*</abbr>
-            <span>Email: </span>
-            <input type="email" name="email" id="email" placeholder="Contact email address" required>
-          </label>
-        </div>
-      </section>
-
-      <section>
-        <h2>Feedback</h2>
-
-        <div>
-          <label for="rating" id="number-label">
-            <span>Site Rating: </span>
-            <input type="number" name="rating" min="1" max="10" id="number" placeholder="Rating 1-10 with 10 being the highest">
-          </label>
-        </div>
-
-        <div>
-          <label for="dropdown">
-            <span>Select your age bracket: </span>
-            <select name="dropdown" id="dropdown">
-              <option value="under-18">Under 18</option>
-              <option value="18-25" selected>18-25</option>
-              <option value="26-35">26-35</option>
-              <option value="36-50">36-50</option>
-              <option value="over-50">Over 50</option>
-            </select>
-          </label>
-        </div>
-
-        <fieldset>
-          <legend>Does this site meet your needs?</legend>
-          <ul>
-            <li>
-              <label for="yes">
-                <input type="radio" name="answer" value="yes">
-                <span>Yes</span>
-              </label>
-            </li>
-            <li>
-              <label for="no">
-                <input type="radio" name="answer" value="no">
-                <span>No</span>
-              </label>
-            </li>
-            <li>
-              <label for="unsure">
-                <input type="radio" name="answer" value="unsure">
-                <span>Unsure</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset>
-          <legend>What features are most important to you? (Select all that apply)</legend>
-          <ul>
-            <li>
-              <label for="speed">
-                <input type="checkbox" name="features" value="speed">
-                <span>Fast Load Times</span>
-              </label>
-            </li>
-            <li>
-              <label for="navigation">
-                <input type="checkbox" name="features" value="navigation">
-                <span>Intuitive Navigation</span>
-              </label>
-            </li>
-            <li>
-              <label for="personal">
-                <input type="checkbox" name="features" value="personal">
-                <span>Personal Recommendations</span>
-              </label>
-            </li>
-            <li>
-              <label for="payment">
-                <input type="checkbox" name="features" value="payment">
-                <span>Multiple Payment Methods</span>
-              </label>
-            </li>
-            <li>
-              <label for="privacy">
-                <input type="checkbox" name="features" value="privacy">
-                <span>Private Information Not Tracked</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <div>
-          <label for="comment">
-            <span>Comments: </span>
-            <textarea name="comment" rows="10" cols="60" placeholder="Provide any additional comments here"></textarea>
-          </label>
-        </div>
-      </section>
-
-      <div>
-        <input type="submit" id="submit" value="Submit">
-      </div>
-
-    </form>
+      </form>
+    </main>
 
     <footer>
 

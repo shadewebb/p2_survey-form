@@ -2,6 +2,8 @@
 :root {
     --title-font-family: 'PT Sans Narrow', sans-serif;
     --main-font-family: 'Open Sans', sans-serif;
+    --main-bg-color: hsl(204, 100%, 90%);
+    --secondary-bg-color: hsl(200, 100%, 75%);
 }
 
 /* Universal Styles */
@@ -14,24 +16,58 @@
 }
 
 /* Blocks */
+body {
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font-family);
+}
 .container {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 10px 30px;
-    background-color: #FFF;
 }
 
 .header {
     font-family: var(--title-font-family);
+    background-color: var(--secondary-bg-color);
+    padding: 10px;
+}
+
+.main {
+    background-color: #FFF;
+}
+.survey-form {
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* Elements */
 .header__title {
     font-size: 3em;
     text-align: center;
+    font-family: var(--title-font-family);
 }
 
 .header__description {
     font-size: 1.4em;
     text-align: center;
+}
+
+.survey-form__header {
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px;
+}
+
+.survey-form__question {
+    padding-bottom: 10px;
+}
+
+.survey-form__question label {
+    text-align: right;
+    width: 80%;
+}
+
+.survey-form__question input {
+    vertical-align: middle;
+    display: inline-block;
+    width: 50%;
 }
